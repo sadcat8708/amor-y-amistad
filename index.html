@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#241b2a" />
+    <title>Amor & Amistad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <main class="app">
+      <section id="welcome" class="screen welcome-screen active">
+        <div class="eyebrow">UN PEQUEÑO REGALO</div>
+        <h1>AMOR <span>&</span> AMISTAD</h1>
+        <p class="lead">Hay algo preparado especialmente para ti.</p>
+        <form id="access-form" class="access-form" novalidate>
+          <label for="password">Ingresa tu contraseña</label>
+          <div class="input-row"><input id="password" type="password" autocomplete="off" placeholder="Tu secreto" /><button type="submit">ENTRAR</button></div>
+          <p id="access-message" class="access-message" aria-live="polite"></p>
+        </form>
+        <p class="hint">Tal vez la respuesta sea algo que solo tú recuerdas.</p>
+      </section>
+
+      <section id="garden" class="screen garden-screen" aria-live="polite">
+        <p id="flower-intro" class="flower-intro"></p>
+        <div id="flower-stage" class="flower-stage"></div>
+        <div id="flower-reveal" class="flower-reveal">
+          <p>Esta flor es para ti.</p>
+          <h2>Para: <span id="nickname"></span></h2>
+          <button id="continue-btn" class="soft-button">CONTINUAR</button>
+        </div>
+      </section>
+
+      <section id="letter" class="screen letter-screen">
+        <div class="letter-card">
+          <p class="eyebrow">PARA TI</p>
+          <h2 id="letter-name"></h2>
+          <p id="typed-message" class="typed-message"></p><span id="cursor" class="cursor">|</span>
+          <div id="letter-ending" class="letter-ending">
+            <p>Gracias por formar parte de mi historia.</p>
+            <p>Este pequeño espacio fue hecho especialmente para ti.</p>
+            <p class="final-line">Esta flor y estas palabras eran solo para ti.</p>
+            <button id="restart-btn" class="soft-button">VOLVER AL INICIO</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
